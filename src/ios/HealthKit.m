@@ -1390,6 +1390,10 @@ static NSString *const HKPluginKeyUUID = @"UUID";
         interval.month = 1;
     } else if ([@"year" isEqualToString:aggregation]) {
         interval.year = 1;
+    } else if ([@"halfhour" isEqualToString:aggregation]) {
+        interval.minute = 30;
+    } else if ([@"quarterhour" isEqualToString:aggregation]) {
+        interval.minute = 15;
     } else {
         // default 'day'
         interval.day = 1;
